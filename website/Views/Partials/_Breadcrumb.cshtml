@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+<nav class="breadcrumb">
+	<ul>
+		@foreach (var ancestor in CurrentPage.Ancestors().Reverse().Where("!umbracoNaviHide")) {
+			<li><a href="@ancestor.Url">@ancestor.Name</a></li>
+		}
+		<li>@CurrentPage.Name</li>
+	</ul>
+</nav> <!-- /breadcrumb -->

@@ -368,6 +368,12 @@
     <Content Include="umbraco\Xslt\Web.config" />
     <Content Include="umbraco_client\CodeMirror\Js\Mode\Razor\LICENSE" />
     <Content Include="umbraco_client\CodeMirror\Js\Mode\Sieve\LICENSE" />
+    <Content Include="Views\GeneralInterior.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Main.cshtml" />
+    <Content Include="Views\Partials\_Breadcrumb.cshtml" />
+    <Content Include="Views\Partials\_FooterNavigation.cshtml" />
+    <Content Include="Views\Partials\_MainNavigation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -379,8 +385,11 @@
     <Content Include="Config\grid.editors.config.js" />
     <Content Include="Config\splashes\booting.aspx" />
     <Content Include="Config\splashes\noNodes.aspx" />
+    <Content Include="css\main.css" />
+    <Content Include="css\normalize.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="scripts\scripts.js" />
     <Content Include="umbraco\Actions\delete.aspx" />
     <Content Include="umbraco\Actions\editContent.aspx" />
     <Content Include="umbraco\Actions\preview.aspx" />
@@ -2860,10 +2869,8 @@
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_Plugins\" />
-    <Folder Include="css\" />
     <Folder Include="masterpages\" />
     <Folder Include="media\" />
-    <Folder Include="scripts\" />
     <Folder Include="usercontrols\" />
     <Folder Include="Views\MacroPartials\" />
     <Folder Include="xslt\" />

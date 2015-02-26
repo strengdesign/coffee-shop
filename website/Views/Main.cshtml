@@ -1,0 +1,97 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ClientDependency.Core.Mvc
+@using ClientDependency.Core
+@{
+	Layout = null;
+
+	//get the current full URL for sharing on social media
+	var currentFullUrl = Request.Url.GetLeftPart(UriPartial.Authority) + Request.Url.PathAndQuery;
+
+	Html.RequiresJs("~/scripts/scripts.js");
+	Html.RequiresCss("~/css/normalize.css");
+	Html.RequiresCss("~/css/main.css");
+}
+
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>@Umbraco.Field("pageTitle", altFieldAlias: "pageName")</title>
+	<meta name="description" content="@Umbraco.Field("metaDescription")">
+	<meta name="author" content="Streng Design & Advertising">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/favicon-180.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/icons/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/icons/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/icons/favicon-76.png">
+	<link rel="apple-touch-icon" href="/images/icons/favicon-57.png">
+	<link rel="icon" sizes="32x32" href="/images/icons/favicon-32.png">
+	<meta name="application-name" content="Company Name">
+	<meta name="msapplication-TileColor" content="#000">
+	<meta name="msapplication-TileImage" content="/images/icons/mstile.png">
+	<meta property="og:title" content="@Umbraco.Field("pageTitle", altFieldAlias: "pageName")">
+	<meta property="og:description" content="@Umbraco.Field("metaDescription")">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="@currentFullUrl">
+	<meta property="og:site_name" content="Company Name">
+	<link href="http://fast.fonts.net/cssapi/56ed4330-a3e4-417a-b9d6-087916414d75.css" rel="stylesheet">
+	@Html.RenderCssHere()
+</head>
+<body>
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+		<defs>
+
+			<symbol id="svg-site-logo" viewBox="0 0 222 111">
+
+			</symbol> <!-- /svg-site-logo -->
+
+			<symbol id="svg-streng" viewBox="0 0 33 14">
+				<polygon points="6,0 0,0 27,14 33,14" />
+			</symbol> <!-- /svg-streng -->
+
+		</defs>
+	</svg>
+
+	<header class="site-header">
+		<a href="/" class="site-logo" title="Home">
+			<svg data-fallback="/images/svg-fallback/site-logo.png">
+				<use xlink:href="#svg-site-logo"></use>
+			</svg>
+		</a>
+
+		@{Html.RenderPartial("_MainNavigation");}
+	</header> <!-- /site-header -->
+
+	@RenderBody()
+
+	<footer class="site-footer">
+
+			@{Html.RenderPartial("_FooterNavigation");}
+			
+			<p class="copyright">&copy;@DateTime.Now.ToString("yyyy") Company Name. All rights reserved.</p>
+
+			<a href="http://www.strengdesign.com" class="site-credit" target="_blank" title="Website design and development by Streng Design &amp; Advertising">
+				Site by Streng
+				<svg class="icon" data-fallback="/images/svg-fallback/streng.png">
+					<use xlink:href="#svg-streng"></use>
+				</svg>
+			</a> <!-- /site-credit -->
+	</footer> <!-- /site-footer -->
+
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	@Html.RenderJsHere()
+	<script type="text/javascript">
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-XXXXXXX-X', 'auto');
+		ga('require', 'linkid', 'linkid.js');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>

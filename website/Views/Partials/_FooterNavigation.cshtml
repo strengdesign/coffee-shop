@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+	int configNodeId = 1056;
+	dynamic configNode = Umbraco.Content(configNodeId);
+}
+
+<nav class="footer-nav">
+	<ul>
+		@foreach (var item in configNode.footerNavigation)
+		{
+			var linkTarget = (item.newWindow == true) ? " target=\"_blank\"" : string.Empty;
+			<li><a href="@item.link" @Html.Raw(linkTarget)>@item.title</a></li>
+		}
+	</ul>
+</nav> <!-- /footer-nav -->
