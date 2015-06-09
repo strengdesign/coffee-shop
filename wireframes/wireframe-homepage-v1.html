@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Wireframe Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="http://fast.fonts.net/cssapi/caa494ab-0c2a-4c26-818e-1d9632a2f064.css" type="text/css" rel="stylesheet">
+	<link href="/css/normalize.css" type="text/css" rel="stylesheet">
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
+	<link href="/css/custom.css" type="text/css" rel="stylesheet">
+	<script src="/scripts/respond.js"></script>
+	<script src="/scripts/modernizr.js"></script>
+</head>
+<body>
+
+	<svg style="display: none;">
+		<defs>
+
+			<symbol id="svg-facebook" viewBox="0 0 64 64">
+				<path d="M36.6,62V34.6h9.1l1.4-10.7H36.6v-6.8c0-3.1,0.8-5.2,5.3-5.2h5.6V2.4C46.6,2.3,43.2,2,39.3,2c-8.1,0-13.6,5-13.6,14.1v7.9 h-9.2v10.7h9.2V62H36.6z" />
+			</symbol> <!-- /svg-facebook -->
+
+			<symbol id="svg-youtube" viewBox="0 0 64 64">
+				<path d="M63.4,19.2c0,0-0.6-4.4-2.5-6.4c-2.4-2.5-5.2-2.6-6.4-2.7C45.5,9.5,32,9.5,32,9.5h0c0,0-13.4,0-22.4,0.6 c-1.2,0.2-4,0.2-6.4,2.7c-1.9,1.9-2.5,6.4-2.5,6.4S0,24.4,0,29.6v4.9c0,5.2,0.6,10.4,0.6,10.4s0.6,4.4,2.5,6.4 c2.4,2.5,5.6,2.5,7.1,2.7c5.1,0.5,21.8,0.6,21.8,0.6s13.5,0,22.4-0.7c1.2-0.2,4-0.2,6.4-2.7c1.9-1.9,2.5-6.4,2.5-6.4 S64,39.6,64,34.4v-4.9C64,24.4,63.4,19.2,63.4,19.2z M25.4,40.3v-18l17.3,9L25.4,40.3z" />
+			</symbol> <!-- /svg-youtube -->
+
+			<symbol id="svg-twitter" viewBox="0 0 64 64">
+				<path d="M64,12.2c-2.4,1-4.9,1.7-7.5,2.1c2.7-1.6,4.8-4.2,5.8-7.3c-2.5,1.5-5.3,2.6-8.3,3.2C51.5,7.6,48.1,6,44.3,6 c-7.3,0-13.1,5.9-13.1,13.1c0,1,0.1,2,0.3,3C20.6,21.6,10.9,16.3,4.5,8.4c-1.1,1.9-1.8,4.2-1.8,6.6c0,4.6,2.3,8.6,5.8,10.9 c-2.2-0.1-4.2-0.7-5.9-1.6c0,0.1,0,0.1,0,0.2c0,6.4,4.5,11.7,10.5,12.9c-1.1,0.3-2.3,0.5-3.5,0.5c-0.8,0-1.7-0.1-2.5-0.2 c1.7,5.2,6.5,9,12.3,9.1c-4.5,3.5-10.2,5.6-16.3,5.6c-1.1,0-2.1-0.1-3.1-0.2C5.8,55.8,12.7,58,20.1,58c24.2,0,37.4-20,37.4-37.4 c0-0.6,0-1.1,0-1.7C60,17.1,62.2,14.8,64,12.2z" />
+			</symbol> <!-- /svg-twitter -->
+
+			<symbol id="svg-instagram" viewBox="0 0 64 64">
+				<path d="M50.5,32c0-1.6-0.2-3.3-0.6-4.8h5.2v25.7c0,1.3-1,2.3-2.3,2.3H11.2c-1.3,0-2.3-1-2.3-2.3V27.2h5.2c-0.4,1.5-0.6,3.2-0.6,4.8 c0,10.2,8.3,18.5,18.5,18.5C42.2,50.5,50.5,42.2,50.5,32 M20.5,32c0-6.4,5.2-11.5,11.5-11.5c6.4,0,11.5,5.2,11.5,11.5 c0,6.4-5.2,11.5-11.5,11.5C25.6,43.5,20.5,38.4,20.5,32 M43.5,18v-6.9c0-1.3,1-2.3,2.3-2.3h7c1.3,0,2.3,1,2.3,2.3V18 c0,1.3-1,2.3-2.3,2.3h-7C44.5,20.3,43.5,19.3,43.5,18 M8.9,2C5.1,2,2,5.1,2,8.9v46.2C2,58.9,5.1,62,8.9,62h46.2 c3.8,0,6.9-3.1,6.9-6.9V8.9C62,5.1,58.9,2,55.1,2H8.9z" />
+			</symbol> <!-- /svg-instagram-->
+
+			<symbol id="svg-search" viewBox="0 0 64 64">
+				<path d="M44.3,27.1c0-4.7-1.7-8.8-5.1-12.2c-3.4-3.4-7.4-5.1-12.2-5.1s-8.8,1.7-12.2,5.1c-3.4,3.4-5.1,7.4-5.1,12.2 c0,4.7,1.7,8.8,5.1,12.2c3.4,3.4,7.4,5.1,12.2,5.1s8.8-1.7,12.2-5.1C42.6,35.9,44.3,31.8,44.3,27.1z M64,59.1c0,1.3-0.5,2.5-1.5,3.5 c-1,1-2.1,1.5-3.5,1.5c-1.4,0-2.5-0.5-3.5-1.5L42.4,49.4c-4.6,3.2-9.7,4.8-15.3,4.8c-3.7,0-7.2-0.7-10.5-2.1 c-3.3-1.4-6.2-3.3-8.7-5.8c-2.4-2.4-4.3-5.3-5.8-8.7C0.7,34.3,0,30.7,0,27.1c0-3.7,0.7-7.2,2.1-10.5c1.4-3.3,3.3-6.2,5.8-8.7 c2.4-2.4,5.3-4.3,8.7-5.8C19.9,0.7,23.4,0,27.1,0s7.2,0.7,10.5,2.1c3.3,1.4,6.2,3.3,8.7,5.8c2.4,2.4,4.3,5.3,5.8,8.7 c1.4,3.3,2.1,6.9,2.1,10.5c0,5.6-1.6,10.8-4.8,15.3l13.2,13.2C63.5,56.6,64,57.7,64,59.1z" />
+			</symbol> <!-- /svg-search -->
+
+			<symbol id="svg-phone" viewBox="0 0 64 64">
+				<path d="M12.9,27.7C18,37.8,26.2,46,36.3,51.1l7.8-7.8c1-1,2.4-1.3,3.6-0.9c4,1.3,8.3,2,12.7,2c2,0,3.6,1.6,3.6,3.6v12.4 c0,2-1.6,3.6-3.6,3.6C27.1,64,0,36.9,0,3.6C0,1.6,1.6,0,3.6,0H16c2,0,3.6,1.6,3.6,3.6c0,4.4,0.7,8.7,2,12.7c0.4,1.2,0.1,2.6-0.9,3.6 L12.9,27.7L12.9,27.7z" />
+			</symbol> <!-- /svg-phone -->
+
+			<symbol id="svg-arrow-left" viewBox="0 0 64 64">
+				<path d="M31.6,7.5c-2-2-5.3-2-7.3,0L0,32l24.3,24.5c1,1,2.3,1.5,3.6,1.5s2.6-0.5,3.6-1.5c2-2,2-5.3,0-7.3L19.7,37.2h39.1 c2.8,0,5.2-2.3,5.2-5.2s-2.3-5.2-5.2-5.2H19.7l11.8-11.9C33.6,12.8,33.6,9.6,31.6,7.5L31.6,7.5z" />
+			</symbol> <!-- /svg-arrow-left -->
+
+			<symbol id="svg-arrow-right" viewBox="0 0 64 64">
+				<path d="M32.44,7.52c-2.02,2.03-2.02,5.32,0,7.35L44.26,26.8H5.16C2.31,26.8,0,29.13,0,32c0,2.87,2.31,5.2,5.16,5.2h39.11 L32.44,49.12c-2.02,2.03-2.02,5.32,0,7.35c1.01,1.01,2.33,1.52,3.64,1.52s2.64-0.51,3.64-1.52L64,32L39.73,7.52 C37.72,5.49,34.46,5.49,32.44,7.52L32.44,7.52z" />
+			</symbol> <!-- /svg-arrow-right -->
+
+		</defs>
+	</svg>
+
+	<div class="header pad-2">
+		<div class="content clearfix">
+
+			<a href="#" title="Home" class="logo"><img src="http://placehold.it/280x140/494a4b/929293/?text=Logo" alt="Logo"></a>
+
+			<div class="navigation">
+				<ul class="main-nav">
+					<li><a href="#" class="text-lg text-white">About</a></li>
+					<li>
+						<a href="#" class="text-lg text-white">Menu</a>
+						<ul class="menu">
+							<li><a href="#">Sub Page 1</a></li>
+							<li><a href="#">Sub Page 2</a></li>
+							<li><a href="#">Sub Page 3</a></li>
+							<li><a href="#">Sub Page 4</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="text-lg text-white">Locations</a>
+						<ul class="menu">
+							<li><a href="#">Sub Page 1</a></li>
+							<li><a href="#">Sub Page 2</a></li>
+							<li><a href="#">Sub Page 3</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="text-lg text-white">Events</a></li>
+					<li><a href="#" class="text-lg text-white">Contact</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="hero bg-gray-80 pad-top-5 pad-bottom-5 clearfix">
+		<div class="overlay pad-left-2 pad-right-2">
+			<div class="content clearfix">
+				<div class="col-lg-8 col-md-12 text-gray-60 text-center pad-top-5 pad-bottom-5">
+					(full screen background photo)
+				</div>
+
+				<div class="col-lg-4 col-md-12">
+					<h3 class="text-white">Nulla Justo Dolor, Tincidunt Quis Sem</h3>
+					<p class="text-md text-gray-40">Aenean nulla tellus, fringilla vel feugiat vel, tempor at augue. Vivamus efficitur fermentum nunc et sodales. Suspendisse ut auctor augue. Donec blandit, libero at imperdiet iaculis, magna dolor porttitor metus, sed mattis odio purus ut ipsum. In ornare purus at consectetur fringilla.</p>
+					<a href="#" class="btn bg-gray-60">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="fotm text-center pad-bottom-5 pad-top-5">
+		<div class="content">
+			<h3 class="text-gray-80">Flavor of the Month</h3>
+			<div class="pad-top-4 clearfix">
+				<div class="col-lg-4 col-sm-12 pad-bottom-3">
+					<a href="#"><img src="http://placehold.it/220x220/494a4b/929293/?text=Photo" alt="Photo"></a>
+				</div>
+				<div class="col-lg-8 col-sm-12 text-left pad-left-2 pad-right-2 no-pad-xs">
+					<h4><a href="#">Aliquam et faucibus</a></h4>
+					<p class="text-md">Aenean nulla tellus, fringilla vel feugiat vel, tempor at augue. Vivamus efficitur fermentum nunc et sodales. Suspendisse ut auctor augue.</p>
+					<a href="#" class="text-md">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pad-bottom-5 pad-top-5 bg-gray-5 text-center">
+		<div class="content">
+			<h3 class="text-gray-80">Upcoming Events</h3>
+			<div class="clearfix text-left gutter-1 pad-top-2 pad-bottom-2">
+				<div class="col-lg-4 col-md-12 pad-2 no-pad-right-xs no-pad-left-xs">
+					<h4><a href="#">Maecenas faucibus risus</a></h4>
+					<span class="text-gray-60">March 12  |  7:30 pm  |  St. Charles</span>
+					<p class="text-md">Aenean nulla tellus, fringilla vel feugiat vel, tempor at augue. Vivamus efficitur fermentum nunc et sodales.</p>
+				</div>
+
+				<div class="col-lg-4 col-md-12 pad-2 no-pad-right-xs no-pad-left-xs">
+					<h4><a href="#">Maecenas faucibus risus</a></h4>
+					<span class="text-gray-60">March 12  |  7:30 pm  |  St. Charles</span>
+					<p class="text-md">Aenean nulla tellus, fringilla vel feugiat vel, tempor at augue. Vivamus efficitur fermentum nunc et sodales.</p>
+				</div>
+
+				<div class="col-lg-4 col-md-12 pad-2 no-pad-right-xs no-pad-left-xs">
+					<h4><a href="#">Maecenas faucibus risus</a></h4>
+					<span class="text-gray-60">March 12  |  7:30 pm  |  St. Charles</span>
+					<p class="text-md">Aenean nulla tellus, fringilla vel feugiat vel, tempor at augue. Vivamus efficitur fermentum nunc et sodales.</p>
+				</div>
+			</div>
+			<a href="#" class="text-md">View All Upcoming Events</a>
+		</div>
+	</div> <!-- /clearfix -->
+
+	<div class="bg-gray-80 text-gray-60 text-center pad-top-5 pad-bottom-3 pad-left-2 pad-right-2">
+		<div class="content">
+
+			<div class="pad-bottom-1">
+				<a href="#" class="pad-1">
+					<svg class="icon icon-gray-60 text-xl">
+						<use xlink:href="#svg-twitter"></use>
+					</svg>
+				</a>
+				<a href="#" class="pad-1">
+					<svg class="icon icon-gray-60 text-xl">
+						<use xlink:href="#svg-facebook"></use>
+					</svg>
+				</a>
+				<a href="#" class="pad-1">
+					<svg class="icon icon-gray-60 text-xl">
+						<use xlink:href="#svg-instagram"></use>
+					</svg>
+				</a>
+			</div>
+
+			<div class="text-lg pad-top-1 pad-bottom-1">
+				<a href="#" class="text-white pad-1">Home</a>
+				<a href="#" class="text-white pad-1">About</a>
+				<a href="#" class="text-white pad-1">Menu</a>
+				<a href="#" class="text-white pad-1">Locations</a>
+				<a href="#" class="text-white pad-1">Events</a>
+				<a href="#" class="text-white pad-1">Contact</a>
+			</div>
+
+			<p class="text-sm">&copy;2015 Company Name. All rights reserved.</p>
+			<p class="text-sm">Site by Streng Design</p>
+
+		</div> <!-- /content -->
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="/scripts/scripts.js"></script>
+</body>
+</html>
